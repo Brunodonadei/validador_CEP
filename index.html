@@ -1,58 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Test HiPlatform</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="./style.css"/>
-  <title>Test HiPlatform</title>
-</head>
-
-<body>
-  <div class="container">
-    <h1>Consulte o CEP</h1>
-    <form>
-      <div class="form-group">
-        <label for="Cep">Cep</label><input type="text" class="form-control" id="cep" />
-        <p id="error2" style="color: crimson;">Cep não encontrado!</p>
-        <p id="error" style="color: crimson;">Cep inválido!</p>
-        <div id="forms">
-
-          <div class="form-group">
-            <label for="Logradouro">Logradouro</label><input type="text" class="form-control" id="logradouro" />
-          </div>
-          <div class="form-group">
-            <label for="Complemento">Complemento</label><input type="text" class="form-control" id="complemento" />
-          </div>
-          <div class="form-group">
-            <label for="Bairro">Bairro</label><input type="text" class="form-control" id="bairro" />
-          </div>
-          <div class="form-group">
-            <label for="Localidade">Localidade</label><input type="text" class="form-control" id="localidade" />
-          </div>
-          <div class="form-group">
-            <label for="UF">UF</label><input type="text" class="form-control" id="uf" />
-          </div>
-          <div class="form-group">
-            <label for="Ibge">IBGE</label><input type="text" class="form-control" id="ibge" />
-          </div>
-          <div class="form-group">
-            <label for="GIA">GIA</label><input type="text" class="form-control" id="gia" />
+  <body>
+    <div class="container">
+      <div class="content">
+        <h1>Consulte o CEP</h1>
+        <form>
+          <div>
             <div class="form-group">
-              <label for="DDD">DDD</label><input type="text" class="form-control" id="ddd" />
+              <label for="Cep">Cep</label>
+              <div class="cep-group">
+                <input type="text" class="form-control" id="cep" />
+                <div id="loading"></div>
+              </div>
+              <p
+                id="error"
+                class="form-text text-muted"
+                style="color: #d64545 !important"
+              ></p>
             </div>
-            <div class="form-group">
-              <label for="Siafi">Siafi</label><input type="text" class="form-control" id="siafi" />
+            <div id="forms">
+              <div class="form-group">
+                <label for="Logradouro">Logradouro</label
+                ><input type="text" class="form-control" id="logradouro" />
+              </div>
+              <div class="form-group">
+                <label for="Complemento">Complemento</label
+                ><input type="text" class="form-control" id="complemento" />
+              </div>
+              <div class="form-group">
+                <label for="Bairro">Bairro</label
+                ><input type="text" class="form-control" id="bairro" />
+              </div>
+              <div class="form-group">
+                <label for="Localidade">Localidade</label
+                ><input type="text" class="form-control" id="localidade" />
+              </div>
+              <div class="form-group">
+                <label for="UF">UF</label
+                ><input type="text" class="form-control" id="uf" />
+              </div>
+              <div class="form-group">
+                <label for="Ibge">IBGE</label
+                ><input type="text" class="form-control" id="ibge" />
+              </div>
+              <div class="form-group">
+                <label for="GIA">GIA</label
+                ><input type="text" class="form-control" id="gia" />
+                <div class="form-group">
+                  <label for="DDD">DDD</label
+                  ><input type="text" class="form-control" id="ddd" />
+                </div>
+                <div class="form-group">
+                  <label for="Siafi">Siafi</label
+                  ><input type="text" class="form-control" id="siafi" />
+                </div>
+              </div>
             </div>
-
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
     <script src="src/js/main.js"></script>
-    
   </body>
-
 </html>
